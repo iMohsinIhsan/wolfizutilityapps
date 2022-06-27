@@ -41,22 +41,17 @@ class HomeCustomButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SizedBox(
-        height: 100.h,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: GestureDetector(
-            onTap: routeName,
-            child: Card(
-              color: Colors.blue.shade50,
-              child: Center(
-                child: Text(
-                  '$label',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
-                ),
+    return SizedBox(
+      height: 100.h,
+      child: GestureDetector(
+        onTap: routeName,
+        child: Card(
+          color: Colors.blue.shade50,
+          child: Center(
+            child: Text(
+              '$label',
+              style: TextStyle(
+                fontSize: 18,
               ),
             ),
           ),
