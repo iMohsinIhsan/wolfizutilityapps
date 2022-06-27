@@ -16,27 +16,7 @@ class HomeView extends GetView<HomeController> {
         title: const Text('My FLutter Apps'),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Row(
-            children: [
-              HomeCustomButtons(label: 'Todo App', routeName: (){
-                Get.toNamed(Routes.TODO_HOME);
-              },),
-              HomeCustomButtons(label: 'Bill Calculator App', routeName: (){
-                Get.toNamed(Routes.BILL_HOME);
-              },),
-            ],
-          ),
-          Row(
-            children: [
-              HomeCustomButtons(label: 'Milk Recorder App', routeName: (){
-                Get.toNamed(Routes.MILK_HOME);
-              },),
-            ],
-          ),
-        ],
-      ),
+      body: GridView(gridDelegate: gridDelegate)
     );
   }
 }
@@ -75,3 +55,24 @@ class HomeCustomButtons extends StatelessWidget {
   }
 }
 
+// Column(
+// children: [
+// Row(
+// children: [
+// HomeCustomButtons(label: 'Todo App', routeName: (){
+// Get.toNamed(Routes.TODO_HOME);
+// },),
+// HomeCustomButtons(label: 'Bill Calculator App', routeName: (){
+// Get.toNamed(Routes.BILL_HOME);
+// },),
+// ],
+// ),
+// Row(
+// children: [
+// HomeCustomButtons(label: 'Milk Recorder App', routeName: (){
+// Get.toNamed(Routes.MILK_HOME);
+// },),
+// ],
+// ),
+// ],
+// ),

@@ -11,19 +11,27 @@ class MilkHomeView extends GetView<MilkHomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MilkHomeView'),
+        title: const Text('Milk Recorder'),
         centerTitle: true,
       ),
-      body: Container(
-        height: 300.w,
-        width: double.maxFinite,
+      body: Column(
+        children: [
+          Container(
+            height: 300.w,
+            width: double.maxFinite,
 
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: NetworkImage(remoteConfig.getString('milk_image'))
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(remoteConfig.getString('milk_image'))
+              )
+            ),
+          ),
+          Container(
+            height: 50.w,
+            width: double.maxFinite,
           )
-        ),
+        ],
       ),
     );
   }
